@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import RepositoryDetailView from './RepositoryDetailView'; // Import the RepositoryDetailView component
 
 const UserRepositoryTable = ({ user }) => {
   const [repositories, setRepositories] = useState([]);
   const [sortBy, setSortBy] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
-  const [expandedRepo, setExpandedRepo] = useState(null); // To keep track of expanded repository
-  const [contributors, setContributors] = useState([]); // To store contributors of expanded repository
-  const [showContributorIds, setShowContributorIds] = useState(false); // To toggle display of contributor IDs
+  const [expandedRepo, setExpandedRepo] = useState(null);
+  const [contributors, setContributors] = useState([]);
+  const [showContributorIds, setShowContributorIds] = useState(false);
 
   useEffect(() => {
     const fetchRepositories = async () => {
@@ -49,7 +50,7 @@ const UserRepositoryTable = ({ user }) => {
         }
       }
     }
-    setShowContributorIds(false); // Reset showContributorIds state when collapsing repository
+    setShowContributorIds(false);
   };
 
   const handleViewRepo = (htmlUrl) => {
@@ -65,7 +66,6 @@ const UserRepositoryTable = ({ user }) => {
     setShowContributorIds(!showContributorIds);
   };
 
-  // Filter repositories based on search term
   const filteredRepositories = repositories.filter(repo =>
     repo.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -121,6 +121,7 @@ const UserRepositoryTable = ({ user }) => {
                       </ul>
                       <button onClick={handleViewContributorIds} className="mt-4 px-3 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600">Toggle Contributor IDs</button>
                     </div>
+                    <RepositoryDetailView repo={repositories.find(r => r.id === expandedRepo)} />
                   </td>
                 </tr>
               )}
