@@ -35,6 +35,9 @@ const UserSearch = ({ onUserSelect }) => {
       <input
         type="text"
         placeholder="Search GitHub users"
+        /* The `value={searchQuery}` attribute in the input field of the `UserSearch` component is
+        binding the value of the input field to the `searchQuery` state variable. This means that
+        the value displayed in the input field is controlled by the `searchQuery` state variable. */
         value={searchQuery}
         /* The `onChange={(e) => setSearchQuery(e.target.value)}` is an event handler in the input
         field of the `UserSearch` component in React. */

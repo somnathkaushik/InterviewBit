@@ -220,7 +220,7 @@ const UserRepositoryTable = ({ user }) => {
                           </li>
                         ))}
                       </ul>
-                      <button onClick={handleViewContributorIds} className="mt-4 px-3 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600">Toggle Contributor IDs</button>
+                      <button onClick={handleViewContributorIds} className="mt-4 px-3 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600">Show Contributor IDs</button>
                     </div>
                     <RepositoryDetailView repo={repositories.find(r => r.id === expandedRepo)} />
                   </td>
