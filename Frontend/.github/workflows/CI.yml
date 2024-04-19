@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: '14'
+
+      - name: Deploy React to GitHub Pages
+        uses: bitovi/github-actions-react-to-github-pages@v1.2.3
+      
+
+      # Add additional steps here as needed for your CI workflow
