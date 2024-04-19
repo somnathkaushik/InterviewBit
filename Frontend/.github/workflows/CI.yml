@@ -23,6 +23,6 @@ jobs:
 
       - name: Build and deploy
         run: |
-          npm run build
+          npm run dev
           npm install -g gh-pages
           gh-pages -d build -b gh-pages --add
