@@ -1,5 +1,4 @@
 
-```
 # GitHub Analytics Dashboard
 
 ## Overview
@@ -85,4 +84,3 @@ The GitHub Analytics Dashboard is a web application built using React.js that al
 4. View README content, recent commits, open issues, and contributors for each repository.
 
 
-```
