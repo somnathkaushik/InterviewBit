@@ -1,5 +1,6 @@
 
-# GitHub Analytics Dashboard [Link Text](https://662e8ab46a9762f668b37db2--githubanalyticdashboard.netlify.app/)
+# <a href="https://662e8ab46a9762f668b37db2--githubanalyticdashboard.netlify.app/" target="_blank">GitHub Analytics Dashboard</a>
+
 
 
 ## Overview
